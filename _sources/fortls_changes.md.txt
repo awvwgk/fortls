@@ -2,6 +2,8 @@
 
 ## Added
 
+- Added hover messages for Types and Modules
+  ([#208](https://github.com/fortran-lang/fortls/issues/208))
 - Added support for Markdown intrinsics from the M_intrinsics repository
   ([#215](https://github.com/fortran-lang/fortls/issues/215))
 - Added and create a schema for fortls configuration files
@@ -65,6 +67,9 @@
 
 ## Changed
 
+- Changed `--incl_suffixes` option to faithfully match the suffixes that are
+  provided in the option, without performing any type of modification.
+  ([#300](https://github.com/fortran-lang/fortls/issues/300))
 - Changed the completion signature to include the full Markdown documentation
   for the completion item.
   ([#219](https://github.com/fortran-lang/fortls/issues/219))
@@ -122,8 +127,28 @@
 
 - Option `--preserve_keyword_order` has been substituted with its opposite `--sort_keywords`
 
+## Removed
+
+- Removed `setuptools_scm_git_archive` due to package deprecation
+  ([#326](https://github.com/fortran-lang/fortls/issues/326))
+
 ## Fixed
 
+- Fixed preprocessor bug with `if` and `elif` conditionals
+  ([#322](https://github.com/fortran-lang/fortls/issues/322))
+- Fixed bug where type fields or methods were not detected if spaces were
+  used around `%`
+  ([#286](https://github.com/fortran-lang/fortls/issues/286))
+- Fixed bug where Go To Implementation would not work for submodules
+  ([#74](https://github.com/fortran-lang/fortls/issues/74))
+- Fixed bug where `associate` blocks for variables pointing to function results
+  where not properly resolved
+  ([#269](https://github.com/fortran-lang/fortls/issues/269))
+- Fixed bug where the `langid` was not propagated correctly from the user
+  settings to the LSP creation stage for all types of requests.
+  ([#257](https://github.com/fortran-lang/fortls/issues/257))
+- Fixed end of scope for `CRITICAL` keyword blocks
+  ([#255](https://github.com/fortran-lang/fortls/issues/255))
 - Fixed bug where completion of interfaces in USE ONLY would produce the snippet
   ([#150](https://github.com/fortran-lang/fortls/issues/150))
 - Fixed bug where diagnostic messages were raised for non-existent variables

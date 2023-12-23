@@ -1,19 +1,19 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" data-content_root="">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="fortls package" href="fortls.html" /><link rel="prev" title="Contact Us" href="contact.html" />
         <link rel="canonical" href="https://fortls.fortran-lang.org/modules.html" />
 
-    <link rel="shortcut icon" href="_static/icon.svg"/><meta name="generator" content="sphinx-5.3.0, furo 2022.09.29"/>
+    <link rel="shortcut icon" href="_static/icon.svg"/><!-- Generated with Sphinx 7.1.2 and Furo 2023.09.10 -->
         <title>Documentation - fortls</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
-    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
     
     
 
@@ -147,7 +147,7 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   <div class="sidebar-logo-container">
     <img class="sidebar-logo" src="_static/logo.svg" alt="Logo"/>
@@ -156,7 +156,7 @@
   <span class="sidebar-brand-text">fortls</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -181,7 +181,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul class="current">
-<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Documentation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="fortls.html">fortls package</a></li>
 </ul>
 </li>
@@ -325,6 +325,7 @@
 <li class="toctree-l3"><a class="reference internal" href="fortls.html#fortls.helper_functions.get_line_prefix"><code class="docutils literal notranslate"><span class="pre">get_line_prefix()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="fortls.html#fortls.helper_functions.get_paren_level"><code class="docutils literal notranslate"><span class="pre">get_paren_level()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="fortls.html#fortls.helper_functions.get_paren_substring"><code class="docutils literal notranslate"><span class="pre">get_paren_substring()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="fortls.html#fortls.helper_functions.get_placeholders"><code class="docutils literal notranslate"><span class="pre">get_placeholders()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="fortls.html#fortls.helper_functions.get_var_stack"><code class="docutils literal notranslate"><span class="pre">get_var_stack()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="fortls.html#fortls.helper_functions.map_keywords"><code class="docutils literal notranslate"><span class="pre">map_keywords()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="fortls.html#fortls.helper_functions.only_dirs"><code class="docutils literal notranslate"><span class="pre">only_dirs()</span></code></a></li>
@@ -509,7 +510,6 @@
 <li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.FortranObj.get_hover_md"><code class="docutils literal notranslate"><span class="pre">FortranObj.get_hover_md()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.FortranObj.get_implicit"><code class="docutils literal notranslate"><span class="pre">FortranObj.get_implicit()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.FortranObj.get_interface"><code class="docutils literal notranslate"><span class="pre">FortranObj.get_interface()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.FortranObj.get_placeholders"><code class="docutils literal notranslate"><span class="pre">FortranObj.get_placeholders()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.FortranObj.get_signature"><code class="docutils literal notranslate"><span class="pre">FortranObj.get_signature()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.FortranObj.get_snippet"><code class="docutils literal notranslate"><span class="pre">FortranObj.get_snippet()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.FortranObj.get_type"><code class="docutils literal notranslate"><span class="pre">FortranObj.get_type()</span></code></a></li>
@@ -545,6 +545,17 @@
 <li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.If.get_type"><code class="docutils literal notranslate"><span class="pre">If.get_type()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="fortls.html#fortls.objects.Import"><code class="docutils literal notranslate"><span class="pre">Import</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.Import.scope"><code class="docutils literal notranslate"><span class="pre">Import.scope</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="fortls.html#fortls.objects.ImportTypes"><code class="docutils literal notranslate"><span class="pre">ImportTypes</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.ImportTypes.ALL"><code class="docutils literal notranslate"><span class="pre">ImportTypes.ALL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.ImportTypes.DEFAULT"><code class="docutils literal notranslate"><span class="pre">ImportTypes.DEFAULT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.ImportTypes.NONE"><code class="docutils literal notranslate"><span class="pre">ImportTypes.NONE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.ImportTypes.ONLY"><code class="docutils literal notranslate"><span class="pre">ImportTypes.ONLY</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="fortls.html#fortls.objects.Include"><code class="docutils literal notranslate"><span class="pre">Include</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.Include.get_desc"><code class="docutils literal notranslate"><span class="pre">Include.get_desc()</span></code></a></li>
 </ul>
@@ -575,6 +586,7 @@
 <li class="toctree-l3"><a class="reference internal" href="fortls.html#fortls.objects.Module"><code class="docutils literal notranslate"><span class="pre">Module</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.Module.check_valid_parent"><code class="docutils literal notranslate"><span class="pre">Module.check_valid_parent()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.Module.get_desc"><code class="docutils literal notranslate"><span class="pre">Module.get_desc()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.Module.get_hover"><code class="docutils literal notranslate"><span class="pre">Module.get_hover()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.Module.get_type"><code class="docutils literal notranslate"><span class="pre">Module.get_type()</span></code></a></li>
 </ul>
 </li>
@@ -643,13 +655,18 @@
 <li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.Type.get_children"><code class="docutils literal notranslate"><span class="pre">Type.get_children()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.Type.get_desc"><code class="docutils literal notranslate"><span class="pre">Type.get_desc()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.Type.get_diagnostics"><code class="docutils literal notranslate"><span class="pre">Type.get_diagnostics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.Type.get_hover"><code class="docutils literal notranslate"><span class="pre">Type.get_hover()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.Type.get_overridden"><code class="docutils literal notranslate"><span class="pre">Type.get_overridden()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.Type.get_type"><code class="docutils literal notranslate"><span class="pre">Type.get_type()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.Type.require_inherit"><code class="docutils literal notranslate"><span class="pre">Type.require_inherit()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.Type.resolve_inherit"><code class="docutils literal notranslate"><span class="pre">Type.resolve_inherit()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="fortls.html#fortls.objects.USE_line"><code class="docutils literal notranslate"><span class="pre">USE_line</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="fortls.html#fortls.objects.Use"><code class="docutils literal notranslate"><span class="pre">Use</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.Use.line_number"><code class="docutils literal notranslate"><span class="pre">Use.line_number</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.Use.rename"><code class="docutils literal notranslate"><span class="pre">Use.rename()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="fortls.html#fortls.objects.Variable"><code class="docutils literal notranslate"><span class="pre">Variable</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.Variable.check_definition"><code class="docutils literal notranslate"><span class="pre">Variable.check_definition()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.objects.Variable.get_desc"><code class="docutils literal notranslate"><span class="pre">Variable.get_desc()</span></code></a></li>
@@ -823,7 +840,8 @@
 <li class="toctree-l4"><a class="reference internal" href="fortls.html#fortls.regex_patterns.FortranRegularExpressions.WORD"><code class="docutils literal notranslate"><span class="pre">FortranRegularExpressions.WORD</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="fortls.html#fortls.regex_patterns.src_file_exts"><code class="docutils literal notranslate"><span class="pre">src_file_exts()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="fortls.html#fortls.regex_patterns.create_src_file_exts_regex"><code class="docutils literal notranslate"><span class="pre">create_src_file_exts_regex()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="fortls.html#fortls.regex_patterns.create_src_file_exts_str"><code class="docutils literal notranslate"><span class="pre">create_src_file_exts_str()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="fortls.html#module-fortls.version">fortls.version module</a></li>
@@ -878,9 +896,7 @@
             
           </div>
           <div class="right-details">
-            <div class="icons">
-              
-            </div>
+            
           </div>
         </div>
         
@@ -892,15 +908,12 @@
       
     </aside>
   </div>
-</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
-    <script src="_static/scripts/furo.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/design-tabs.js"></script>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=dade2cce"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     </body>
 </html>

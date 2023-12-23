@@ -1,19 +1,19 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" data-content_root="">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Contributing to fortls" href="contributing.html" /><link rel="prev" title="Configuration options" href="options.html" />
         <link rel="canonical" href="https://fortls.fortran-lang.org/fortls_changes.html" />
 
-    <link rel="shortcut icon" href="_static/icon.svg"/><meta name="generator" content="sphinx-5.3.0, furo 2022.09.29"/>
+    <link rel="shortcut icon" href="_static/icon.svg"/><!-- Generated with Sphinx 7.1.2 and Furo 2023.09.10 -->
         <title>Unique fortls features (not in fortran-language-server) - fortls</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
-    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
     
     
 
@@ -147,7 +147,7 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   <div class="sidebar-logo-container">
     <img class="sidebar-logo" src="_static/logo.svg" alt="Logo"/>
@@ -156,7 +156,7 @@
   <span class="sidebar-brand-text">fortls</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -181,7 +181,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="modules.html">Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="modules.html">Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Documentation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="fortls.html">fortls package</a></li>
 </ul>
 </li>
@@ -225,6 +225,8 @@
 <section id="added">
 <h2>Added<a class="headerlink" href="#added" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
+<li><p>Added hover messages for Types and Modules
+(<a class="reference external" href="https://github.com/fortran-lang/fortls/issues/208">#208</a>)</p></li>
 <li><p>Added support for Markdown intrinsics from the M_intrinsics repository
 (<a class="reference external" href="https://github.com/fortran-lang/fortls/issues/215">#215</a>)</p></li>
 <li><p>Added and create a schema for fortls configuration files
@@ -290,6 +292,9 @@
 <section id="changed">
 <h2>Changed<a class="headerlink" href="#changed" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
+<li><p>Changed <code class="docutils literal notranslate"><span class="pre">--incl_suffixes</span></code> option to faithfully match the suffixes that are
+provided in the option, without performing any type of modification.
+(<a class="reference external" href="https://github.com/fortran-lang/fortls/issues/300">#300</a>)</p></li>
 <li><p>Changed the completion signature to include the full Markdown documentation
 for the completion item.
 (<a class="reference external" href="https://github.com/fortran-lang/fortls/issues/219">#219</a>)</p></li>
@@ -350,9 +355,31 @@ handle their dependencies through <code class="docutils literal notranslate"><sp
 <li><p>Option <code class="docutils literal notranslate"><span class="pre">--preserve_keyword_order</span></code> has been substituted with its opposite <code class="docutils literal notranslate"><span class="pre">--sort_keywords</span></code></p></li>
 </ul>
 </section>
+<section id="removed">
+<h2>Removed<a class="headerlink" href="#removed" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Removed <code class="docutils literal notranslate"><span class="pre">setuptools_scm_git_archive</span></code> due to package deprecation
+(<a class="reference external" href="https://github.com/fortran-lang/fortls/issues/326">#326</a>)</p></li>
+</ul>
+</section>
 <section id="fixed">
 <h2>Fixed<a class="headerlink" href="#fixed" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
+<li><p>Fixed preprocessor bug with <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">elif</span></code> conditionals
+(<a class="reference external" href="https://github.com/fortran-lang/fortls/issues/322">#322</a>)</p></li>
+<li><p>Fixed bug where type fields or methods were not detected if spaces were
+used around <code class="docutils literal notranslate"><span class="pre">%</span></code>
+(<a class="reference external" href="https://github.com/fortran-lang/fortls/issues/286">#286</a>)</p></li>
+<li><p>Fixed bug where Go To Implementation would not work for submodules
+(<a class="reference external" href="https://github.com/fortran-lang/fortls/issues/74">#74</a>)</p></li>
+<li><p>Fixed bug where <code class="docutils literal notranslate"><span class="pre">associate</span></code> blocks for variables pointing to function results
+where not properly resolved
+(<a class="reference external" href="https://github.com/fortran-lang/fortls/issues/269">#269</a>)</p></li>
+<li><p>Fixed bug where the <code class="docutils literal notranslate"><span class="pre">langid</span></code> was not propagated correctly from the user
+settings to the LSP creation stage for all types of requests.
+(<a class="reference external" href="https://github.com/fortran-lang/fortls/issues/257">#257</a>)</p></li>
+<li><p>Fixed end of scope for <code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code> keyword blocks
+(<a class="reference external" href="https://github.com/fortran-lang/fortls/issues/255">#255</a>)</p></li>
 <li><p>Fixed bug where completion of interfaces in USE ONLY would produce the snippet
 (<a class="reference external" href="https://github.com/fortran-lang/fortls/issues/150">#150</a>)</p></li>
 <li><p>Fixed bug where diagnostic messages were raised for non-existent variables
@@ -483,9 +510,7 @@ multiline but the function body can.</p></li>
             
           </div>
           <div class="right-details">
-            <div class="icons">
-              
-            </div>
+            
           </div>
         </div>
         
@@ -507,6 +532,7 @@ multiline but the function body can.</p></li>
 <li><a class="reference internal" href="#added">Added</a></li>
 <li><a class="reference internal" href="#changed">Changed</a></li>
 <li><a class="reference internal" href="#deprecated">Deprecated</a></li>
+<li><a class="reference internal" href="#removed">Removed</a></li>
 <li><a class="reference internal" href="#fixed">Fixed</a></li>
 </ul>
 </li>
@@ -519,15 +545,12 @@ multiline but the function body can.</p></li>
       
     </aside>
   </div>
-</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
-    <script src="_static/scripts/furo.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/design-tabs.js"></script>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=dade2cce"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     </body>
 </html>

@@ -1,19 +1,19 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" data-content_root="">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Configuration options" href="options.html" /><link rel="prev" title="Features" href="features.html" />
         <link rel="canonical" href="https://fortls.fortran-lang.org/editor_integration.html" />
 
-    <link rel="shortcut icon" href="_static/icon.svg"/><meta name="generator" content="sphinx-5.3.0, furo 2022.09.29"/>
+    <link rel="shortcut icon" href="_static/icon.svg"/><!-- Generated with Sphinx 7.1.2 and Furo 2023.09.10 -->
         <title>Editor Integration - fortls</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
-    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
     
     
 
@@ -147,7 +147,7 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   <div class="sidebar-logo-container">
     <img class="sidebar-logo" src="_static/logo.svg" alt="Logo"/>
@@ -156,7 +156,7 @@
   <span class="sidebar-brand-text">fortls</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -181,7 +181,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="modules.html">Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="modules.html">Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Documentation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="fortls.html">fortls package</a></li>
 </ul>
 </li>
@@ -247,15 +247,15 @@ available through the extension are not representative of <code class="docutils 
 <h2><a class="reference external" href="https://www.sublimetext.com/">Sublime Text</a><a class="headerlink" href="#sublime-text" title="Permalink to this heading">#</a></h2>
 <p>Firstly, install <code class="docutils literal notranslate"><span class="pre">fortls</span></code> then install the <a class="reference external" href="https://github.com/sublimelsp/LSP">LSP</a> package from package control.
 Finally, install the <a class="reference external" href="https://packagecontrol.io/packages/Fortran">Fortran</a> package and add the following in your configuration</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;clients&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;fortls&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;fortls&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--notify_init&quot;</span><span class="p">],</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;selector&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;source.modern-fortran | source.fixedform-fortran&quot;</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;clients&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;fortls&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;fortls&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--notify_init&quot;</span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;selector&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;source.modern-fortran | source.fixedform-fortran&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>For more details see the LSP <a class="reference external" href="https://lsp.sublimetext.io/language_servers/#fortran">documentation</a>.</p>
@@ -351,7 +351,7 @@ nmap <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt
 <p>Install the <a class="reference external" href="https://github.com/joaotavora/eglot">eglot</a> package which supports fortls out of the box.
 This can be done in emacs version &gt; 26.1 via <code class="docutils literal notranslate"><span class="pre">M-x</span> <span class="pre">package-install</span> <span class="pre">RET</span> <span class="pre">eglot</span> <span class="pre">RET</span></code>.
 Arguments to <code class="docutils literal notranslate"><span class="pre">fortls</span></code> can be provided in the form</p>
-<div class="highlight-elisp notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nv">add-to-list</span><span class="w"> </span><span class="ss">&#39;eglot-server-programs</span><span class="w"> </span><span class="o">&#39;</span><span class="p">(</span><span class="nv">f90-mode</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;fortls&quot;</span><span class="w"> </span><span class="s">&quot;--notify_init&quot;</span><span class="w"> </span><span class="s">&quot;--nthreads=4&quot;</span><span class="p">)))</span><span class="w"></span>
+<div class="highlight-elisp notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nv">add-to-list</span><span class="w"> </span><span class="ss">&#39;eglot-server-programs</span><span class="w"> </span><span class="o">&#39;</span><span class="p">(</span><span class="nv">f90-mode</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;fortls&quot;</span><span class="w"> </span><span class="s">&quot;--notify_init&quot;</span><span class="w"> </span><span class="s">&quot;--nthreads=4&quot;</span><span class="p">)))</span>
 </pre></div>
 </div>
 </section>
@@ -365,17 +365,17 @@ Arguments to <code class="docutils literal notranslate"><span class="pre">fortls
 <p>Install <a class="reference external" href="https://github.com/kak-lsp/">kak-lsp</a>.</p>
 <p>Edit the <code class="docutils literal notranslate"><span class="pre">kak-lsp.toml</span></code> config file to include:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>language.fortran<span class="o">]</span>
-<span class="nv">filetypes</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;fortran&quot;</span><span class="o">]</span>
-<span class="nv">roots</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;.git&quot;</span>, <span class="s2">&quot;.fortls&quot;</span><span class="o">]</span>
-<span class="nb">command</span> <span class="o">=</span> <span class="s2">&quot;fortls&quot;</span>
-<span class="nv">args</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;--symbol_skip_mem&quot;</span>, <span class="s2">&quot;--incremental_sync&quot;</span>, <span class="s2">&quot;--autocomplete_no_prefix&quot;</span>, <span class="s2">&quot;--lowercase_intrisics&quot;</span><span class="o">]</span>
+<span class="nv">filetypes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;fortran&quot;</span><span class="o">]</span>
+<span class="nv">roots</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;.git&quot;</span>,<span class="w"> </span><span class="s2">&quot;.fortls&quot;</span><span class="o">]</span>
+<span class="nb">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;fortls&quot;</span>
+<span class="nv">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;--symbol_skip_mem&quot;</span>,<span class="w"> </span><span class="s2">&quot;--incremental_sync&quot;</span>,<span class="w"> </span><span class="s2">&quot;--autocomplete_no_prefix&quot;</span>,<span class="w"> </span><span class="s2">&quot;--lowercase_intrisics&quot;</span><span class="o">]</span>
 </pre></div>
 </div>
 <p>Edit your <code class="docutils literal notranslate"><span class="pre">kakrc</span></code> config to enable <code class="docutils literal notranslate"><span class="pre">kak-lsp</span></code>, adding <code class="docutils literal notranslate"><span class="pre">fortran</span></code> as a filetype:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">eval</span> %sh<span class="o">{</span>kak-lsp --kakoune -s <span class="nv">$kak_session</span><span class="o">}</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">eval</span><span class="w"> </span>%sh<span class="o">{</span>kak-lsp<span class="w"> </span>--kakoune<span class="w"> </span>-s<span class="w"> </span><span class="nv">$kak_session</span><span class="o">}</span>
 <span class="c1"># lsp-enable</span>
-hook global WinSetOption <span class="nv">filetype</span><span class="o">=(</span>fortran<span class="o">)</span> %<span class="o">{</span>
-  lsp-enable-window
+hook<span class="w"> </span>global<span class="w"> </span>WinSetOption<span class="w"> </span><span class="nv">filetype</span><span class="o">=(</span>fortran<span class="o">)</span><span class="w"> </span>%<span class="o">{</span>
+<span class="w">  </span>lsp-enable-window
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -419,9 +419,7 @@ hook global WinSetOption <span class="nv">filetype</span><span class="o">=(</spa
             
           </div>
           <div class="right-details">
-            <div class="icons">
-              
-            </div>
+            
           </div>
         </div>
         
@@ -467,15 +465,12 @@ hook global WinSetOption <span class="nv">filetype</span><span class="o">=(</spa
       
     </aside>
   </div>
-</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
-    <script src="_static/scripts/furo.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/design-tabs.js"></script>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=dade2cce"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     </body>
 </html>
