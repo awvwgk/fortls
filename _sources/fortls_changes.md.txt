@@ -2,6 +2,12 @@
 
 ## Added
 
+- Added support for changing the default Python recursion depth
+  ([#312](https://github.com/fortran-lang/fortls/issues/312))
+- Added support for preprocessor macro expansions
+  ([#368](https://github.com/fortran-lang/fortls/pull/368))
+- Added support for leading white spaces in preprocessor directives
+  ([#297](https://github.com/fortran-lang/fortls/issues/297))
 - Added hover messages for Types and Modules
   ([#208](https://github.com/fortran-lang/fortls/issues/208))
 - Added support for Markdown intrinsics from the M_intrinsics repository
@@ -78,6 +84,10 @@
 - Changed automatic detection of fixed/free-form of files to ignore
   preprocessor lines.
   ([#302](https://github.com/fortran-lang/fortls/pull/302))
+- Moved project setup from `setup.cfg` to `pyproject.toml`
+  ([#384](https://github.com/fortran-lang/fortls/pull/384))
+- Bumped `setuptools` version to `>=61.0.0`
+  ([#384](https://github.com/fortran-lang/fortls/pull/384))
 - Changed the default value of the following options when a mix the command line
   interface and the `json` interface are used. Instead of having the `json` interface
   default the values to an empty set it now defaults to the values of the
@@ -137,6 +147,20 @@
 
 ## Fixed
 
+- Fixed incorrect document symbol for `SUBMODULE` statements
+  ([#413](https://github.com/fortran-lang/fortls/issues/413))
+- Fixed bug with nested preprocessor blocks erroneously evaluating as active
+  ([#404](https://github.com/fortran-lang/fortls/issues/404))
+- Fixed bug where parser would crash when trying to retrieve an invalid line no.
+  ([#398](https://github.com/fortran-lang/fortls/issues/398))
+- Fixed bug with string quotes not being escaped when looking for parenthesis
+  ([#250](https://github.com/fortran-lang/fortls/issues/250))
+- Fixed bug with line continuations in lexical tokens
+  ([#235](https://github.com/fortran-lang/fortls/issues/235))
+- Fixed end of scope errors raised by trailing semicolon in native parser
+  ([#265](https://github.com/fortran-lang/fortls/issues/265))
+- Fixed bug where parent scope for includes in AST could be `None`
+  ([#329](https://github.com/fortran-lang/fortls/issues/329))
 - Fixed preprocessor bug with `if` and `elif` conditionals
   ([#322](https://github.com/fortran-lang/fortls/issues/322))
 - Fixed bug where type fields or methods were not detected if spaces were
